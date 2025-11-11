@@ -1,8 +1,8 @@
 @using TodoListMVC.Models
-
+<title>@ViewData["Home"]</title>
 <h2 class="content-block">Home</h2>
 
-@(Html.DevExtreme().DataGrid<SampleOrder>()
+@* @(Html.DevExtreme().DataGrid<SampleOrder>()
     .ElementAttr(new { @class = "dx-card wide-card" })
     .DataSource(d => d.Mvc().Controller("SampleData").LoadAction("Get").Key("OrderID"))
     .ShowBorders(false)
@@ -24,4 +24,11 @@
         .AllowedPageSizes(new[] { 5, 10, 20 })
         .ShowInfo(true)
     )
+) *@
+@(Html.DevExtreme().DataGrid<TodoList>()
+        
+
+
+
+
 )
